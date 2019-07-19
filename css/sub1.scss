@@ -1,0 +1,54 @@
+@mixin clearfix {
+    content: "";
+    display: block;
+    clear: both; 
+}
+@mixin boxSize{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.area{width: 100%;@include boxSize}
+#sub_content #visual{background-image: url("../images/menu/m_menu_bg.jpg");background-size: cover;height: 300px}
+#sub_content #visual .area{text-align: center;color: #fff}
+#sub_content #visual .area h3{font-size: 50px;padding-top: 90px;font-family: NotoB}
+#sub_content #visual .area p{font-size: 13px;line-height: 26px;padding-top: 20px;}
+
+#sub1 .menu{height: 50px;width: 100%;margin-top: 40px;margin-left: 0px;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;text-align: center}
+#sub1 .menu li{float: left;margin-top: 5px;width: 33.3%;font-size: 15px;line-height: 40px}
+#sub1 .menu li a{display: inline-block}
+#sub1 .menu li.on:after{content: "";display: block;height: 2px;background: #235b42;width: 100%;margin-top: 3px;}
+
+#sub1 #food{
+    @include boxSize;width: 335px;margin: 100px auto 0;
+    &:after{@include clearfix}
+}
+
+#sub1 #food li:hover a, #sub1 #food li a:focus, #sub1 #sandwich li:hover a, #sub1 #sandwich li a:focus{color: #235b42}
+#sub1 #food li{float: left;height: 280px;width: 160px}
+#sub1 #food li a{display: block}
+#sub1 #food li:nth-child(even){margin-left: 15px}
+#sub1 #food li img{width: 160px;}
+#sub1 #food li span{font-size: 13px;padding: 10px 0 80px 0;display: block;text-align: center}
+#sub1 #food .mark{margin-top: -15px;}
+#sub1 #food .list2.paddingB span{margin-top: 13px}
+#sub1 #food .list1 p, #sub1 #food .list2 p{margin-left: 30%;margin-bottom: 10px;width: 50px;height: 30px;font-size: 14px;line-height: 30px;border-radius: 30px;color: #fff;text-align: center;}
+#sub1 #food .list1 p{background-color: #751619}
+#sub1 #food .list2 p{background-color: #235b42}
+
+
+/* modal */
+#mask,  #modal .md_cnt{position: fixed;z-index: 300;display: none;}
+#mask{top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,.6)}
+#modal div > * {position: absolute;}
+#modal .md_cnt{width: 350px;height: 600px;text-align: center;background: #fff;margin: 0 auto;border: 1px solid #3e4041;}
+#modal div h4{left: 20px;font-size: 30px;top: 54px;width: 300px;}
+#modal div span {font-size: 13px;width: 200px;left: 80px;}
+#modal div .eng{top: 105px;color: #828282;}
+#modal div .pri{top: 126px}
+#modal .md_cnt img{width: 280px;height: 280px;top: 27%;left: 38px;}
+#modal div p{width: 300px;top: 77%;font-size: 13px;line-height: 23px;left: 22px;letter-spacing: 0.8px;}
+#modal div table{right: 50px;bottom: 60px;width: 350px;display: none;color: #235b42;border-top: 1px solid #235b42;border-bottom: 1px solid #ccc;}
+#modal .md_close_btn{top: 20px;right: 20px;}
+#modal .md_close_btn img{width: 13px;height: auto;top: 25%;left: 50px}
