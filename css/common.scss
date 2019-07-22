@@ -45,9 +45,12 @@ body{font-family: NotoR, "맑은 고딕", "Malgun Gothic";font-size: 1em;color: 
 
 
 /* header */
-#header{position: absolute;top: 0;left: 0;width: 100%;height: 70px;color: #fff;z-index: 100}
-#header .head_top{width: 100%;background: #235b42;height: 70px;position: fixed}
-#header .logo{margin: 6px 0 0 15px}
+#header{
+  position: absolute;top: 0;left: 0;width: 100%;height: 70px;color: #fff;z-index: 100;
+  .head_top{width: 100%;background: #235b42;height: 70px;position: fixed}
+  .logo{margin: 6px 0 0 15px}
+}
+
 .btn_menu{position: absolute;right: 5px;top: 20px}
 
 #mGnb{position: fixed;bottom: 100%;right: 0;height: 100%;width: 300px;color: #2b2b2b;background: #fff;z-index: 200}
@@ -66,8 +69,13 @@ body{font-family: NotoR, "맑은 고딕", "Malgun Gothic";font-size: 1em;color: 
 .area{text-align: center;margin: 0 auto;width: 100%}
 #content > article > .area{display: table;height: 100%;padding-top: 70px;}
 #cnt0{background: url("../images/main/m_bg.jpg") repeat-x center top;background-size: contain;box-sizing: border-box;color: #fff}
-#cnt0 .area h3{font-size: 40px;line-height: 40px;padding-top: 0;margin-top: -250px;font-family: NotoB}
-#cnt0 .area span{position: absolute;font-size: 14px;margin-top: -107px;margin-left: -15%;font-family: NotoT}
+#cnt0 .area{
+  h3{font-size: 40px;line-height: 40px;padding-top: 0;margin-top: -250px;font-family: NotoB}
+  span{position: absolute;font-size: 14px;margin-top: -107px;margin-left: -15%;font-family: NotoT}
+}
+
+
+#cnt0 .area 
 #cnt0 .area span:before{content: "";display: block;width: 35px;height: 1px;background: #fff;width: 20px;margin-bottom: 3px;margin-left: 56px}
 #cnt0 .area p{position: relative;font-size: 13px;line-height: 20px;z-index: 1;margin-top: 15px;margin-bottom: 5px}
 #cnt0 em{display: block;font-size: 12px;width:125px;height: 24px;line-height: 24px;margin: 0 auto;margin-top: 15px;background: rgba(255, 255, 255, 0.4)}
@@ -101,9 +109,9 @@ body{font-family: NotoR, "맑은 고딕", "Malgun Gothic";font-size: 1em;color: 
 #content > #cnt4 > .area, #content > #cnt5 > .area{padding-top: 0;color: #fff;background: #235b42}
 #cnt4 h3, #cnt5 h3{font-size: 25px}
 .main_txt p{padding: 10px 0 5px}
-.main_txt .circle{position: relative;left: 50%;width: 170px;height: 170px;margin-left: -85px;}
-#cnt4 .main_txt .circle img{width: 80px;height: auto;}
-#cnt5 .main_txt .circle img{width: 100px;height:auto}
+.main_txt .circle{position: relative;left: 50%;width: 170px;height: 170px;margin-left: -85px;top: 60px}
+#cnt4 .main_txt .circle img{width: 40px;height: auto;}
+#cnt5 .main_txt .circle img{width: 60px;height:auto}
 .main_txt .circle p{font-size: 13px;font-family: NotoR}
 .main_txt .circle img{margin-top: 30px}
 
@@ -114,14 +122,14 @@ body{font-family: NotoR, "맑은 고딕", "Malgun Gothic";font-size: 1em;color: 
 #cnt6 ul figcaption{text-align: center;font-size: 13px}
 #cnt6 ul li {float: none;display: inline-block; margin-left: 0px;vertical-align: top;background: #235b42}
 #cnt6 ul li+ li {margin-top: 20px;}
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
 .flip{color: #fff;position: relative;overflow: hidden;min-width: 237px;max-width: 237px;max-height: 280px;
   width: 100%;text-align: center;background-color: #235b42;font-size: 14px;-webkit-perspective: 50em;
 perspective: 50em;}
 .flip *{-webkit-box-sizing: border-box;box-sizing: border-box;-webkit-transition: all 0.6s ease;transition: all 0.6s ease;}
 .flip img{opacity: 1;width: 100%;-webkit-transform-origin: 50% 0%;-ms-transform-origin: 50% 0%;
   transform-origin: 50% 0%;}
-.flip p{position: absolute;top: 0;left: 0;bottom: 0;width: 100%;-webkit-transform: rotateX(90deg);transform: rotateX(90deg);
+.flip p{position: absolute;top: 40px;left: 0;bottom: 0;width: 100%;-webkit-transform: rotateX(90deg);transform: rotateX(90deg);
 -webkit-transform-origin: 50% 100%;-ms-transform-origin: 50% 100%;transform-origin: 50% 100%;z-index: 1;opacity: 0;padding: 20px 30px;line-height: 1.5em;font-weight: 500;margin: 0 0 15px;}
 .flip:hover img{-webkit-transform: rotateX(-90deg);transform: rotateX(-90deg);opacity: 0;}
 .flip:hover p{-webkit-transform: rotateX(0deg);transform: rotateX(0deg);opacity: 1;-webkit-transition-delay: 0.2s;
@@ -143,9 +151,6 @@ transition-delay: 0.2s;}
 #footer .area .sns{margin-top: 10px;}
 #footer .area .sns li{margin-left: 20px;}
 #footer .area .sns .twitter{margin-left: 0;}
-
-
-
 
 
 
